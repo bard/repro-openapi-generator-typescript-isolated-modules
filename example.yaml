@@ -1,0 +1,21 @@
+openapi: 3.0.2
+info:
+  title: Example
+  version: "1"
+paths:
+  "/user":
+    get:
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/User"
+          description: A user
+components:
+  schemas:
+    User:
+      required: ["name"]
+      properties:
+        name:
+          type: string
